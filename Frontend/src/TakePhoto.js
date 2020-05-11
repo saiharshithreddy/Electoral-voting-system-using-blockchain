@@ -29,22 +29,8 @@ class TakePhoto extends Component {
         
         var data = {"username":this.state.username,
         "feature_vector":fv}
-        var data={};
         data.username= this.state.username
-        // console.log("image verification success");
-        // swal.fire({
-        //     icon: 'success',
-        //     title: 'Congrats!! Image Taken!',
-        //     text: 'You have successfully verified yourself',
-        //     confirmButtonText: "OK"
-        // });
-
-        // this.props.history.push({
-        //     pathname: "/welcome",
-        //     state: {
-        //             username:this.state.username,
-        //     }
-        // });
+       
        const response = await axios.post('http://localhost:5000/api/predict',data)
 
         console.log(" response.data" + response)
